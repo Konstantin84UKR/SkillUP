@@ -3,7 +3,8 @@
 let nonUniqueElements = function(arr){
    
   let result = arr.filter(function (elem,index,array){
-  let count = 0;
+        
+    let count = 0;
 
         for (const iterator of array) {
           if(iterator === elem){

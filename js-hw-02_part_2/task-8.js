@@ -6,7 +6,6 @@ let median = function (arr) {
     return a - b;
   });
 
-
   let len = arr.length;
 
   if(len == 0){
