@@ -22,9 +22,6 @@ const ordersB = [
 function deliveryProgress(order){
   
    let answer;
-
-console.log()
-
    if(order.deliveryProgress === 100){
       answer = 'Done';        
    }else if(order.deliveryProgress < 100 && Number.isFinite(order.deliveryProgress) ){
@@ -53,10 +50,8 @@ function showDeliveryStatus(arr){
       if(typeof result[i] !== "string") {
         result[i] = 'Not Ordered';
       }
-
-   
 } 
-   return result;
+   return result.join(",");
 }
 
 
