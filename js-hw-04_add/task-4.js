@@ -20,16 +20,14 @@ const ordersB = [
 
 
 function deliveryProgress(order){
-  
-   let answer;
+
    if(order.deliveryProgress === 100){
-      answer = 'Done';        
+      return 'Done';        
    }else if(order.deliveryProgress < 100 && Number.isFinite(order.deliveryProgress) ){
-      answer = 'In progress'
+      return 'In progress'
    }else if(order.deliveryProgress === null){
-      answer = 'Ready for delivery'
-   }   
-   return answer;
+      return 'Ready for delivery'
+   }     
 }
 
 
