@@ -82,7 +82,7 @@ const account = {
     }else if(tran.length === 1){
       return tran[0];
     }else{
-      console.log(`по транзации c ${id} непридвиденная ситуация`);
+      console.log(`по транзации c ${id} непредвиденная ситуация`);
       return true; //верну тру что бы не создавать новую транзакцию 
     }
   },

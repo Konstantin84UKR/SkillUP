@@ -18,13 +18,13 @@ const findBestEmployee = function(employees) {
   let maxTask = 0;
   let employe;
   for (const key in employees) {
-    if (Object.hasOwnProperty.call( employees , key)) {   // Object.hasOwnProperty.call это редактор полсказал. Я так и не понял необходимость этой проверки. 
+  //  if (Object.hasOwnProperty.call( employees , key)) {   // Object.hasOwnProperty.call это редактор полсказал. Я так и не понял необходимость этой проверки. 
       const element = employees[key];
       if(element > maxTask){
         maxTask = element;
         employe = key;
       }   
-    }
+   // }
   }
   return employe;
 
