@@ -4,8 +4,6 @@
 
 
 class Car {
-
-
     /*
      * Добавь статический метод `getSpecs(car)`,
      * который принимает объект-машину как параметр и выводит
@@ -83,7 +81,6 @@ class Car {
         if (this.speed - value >= 0) {
             this.speed -= value;
         }
-
     }
     /*
      * Добавляет в поле distance киллометраж (hours * speed),
