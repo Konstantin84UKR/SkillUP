@@ -10,14 +10,17 @@ class Car {
      * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
      */
     static getSpecs(car) {
-        let filds = [];
-        for (let i in car) {
-            if (car.hasOwnProperty(i)) {
-                filds.push(` ${i}: ${car[i]}`);
-            }
-        }
+        // let filds = [];
+        // for (let i in car) {
+        //     if (car.hasOwnProperty(i)) {
+        //         filds.push(` ${i}: ${car[i]}`);
+        //     }
+        // }
 
-        console.log(filds.join());
+        // console.log(filds.join());
+        // Переделал после замечания 
+        console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn:${car.isOn}, distance:${car.distance}, price:${car.price}`);
+       
     }
     /*
      * Конструктор получает объект настроек.
@@ -88,7 +91,7 @@ class Car {
      */
     drive(hours) {
         if (this.isOn) {
-            this.distance = hours * this.speed;
+            this.distance += hours * this.speed;
         }
     }
 }
