@@ -13,44 +13,55 @@
 // Передати в метод №7 колбек ф-ю що підносить числа в степінь
 // Написати всі методи і перевірити чи вони працюють
 
-const power = function(){
-    this.AX = this.AX ** this.BX;
+const power = function () {
+    this._AX = this._AX ** this._BX;
 }
 
-class Calculator{
-    
-    constructor(){
-        this.AX = 0; // названия как в регистры в intel 8086 проце так веселее))
-        this.BX = 0;
-    }    
-    add(){
-        this.AX +=this.BX; // результат в AX тоже по аналогии с intel 8086 
+class Calculator {
+
+    constructor() {
+        this._AX = 0; //  в стиле intel 8086 
+        this._BX = 0;
+    }
+
+    set A(value) {
+        if (typeof value === "number")
+            this._AX = value;
+    }
+
+    set B(value) {
+        if (typeof value === "number")
+            this._BX = value;
+    }
+
+    add() {
+        this._AX += this._BX; // результат в AX тоже по аналогии с intel 8086 
         this.LOG();
     }
-    sub(){
-        this.AX -= this.BX;
+    sub() {
+        this._AX -= this._BX;
         this.LOG();
     }
-    mul(){
-        this.AX *= this.BX;
+    mul() {
+        this._AX *= this._BX;
         this.LOG();
     }
-    div(){
-        this.AX /= this.BX;
+    div() {
+        this._AX /= this._BX;
         this.LOG();
     }
-    LOG(){
-        console.log(`Результат операції ${this.AX}`);
+    LOG() {
+        console.log(`Результат операції ${this._AX}`);
     };
-    INVOKE(callback){
+    INVOKE(callback) {
         callback.call(this);
         this.LOG();
     }
 }
 
 let intel8086 = new Calculator();
-intel8086.AX = 2;
-intel8086.BX = 3;
+intel8086.A = 2;
+intel8086.B = 3;
 intel8086.add();
 intel8086.sub();
 intel8086.mul();
