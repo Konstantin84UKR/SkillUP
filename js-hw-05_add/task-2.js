@@ -89,8 +89,8 @@ class Library {
     }
     addToFavourite(title) {
 
-        if (!this._favourite.includes(value => { return value.title === title })) {  // проверяю есть книга с таким названием с любимых
-            const book = this._books.find(value => { return value.title === title }); // проверяю есть книга ли такая книга в библиотеке 
+        if (!this._favourite.includes(value => { return value.title === title })) {  
+            const book = this._books.find(value => { return value.title === title });  
             if (book != undefined) {
                 this._favourite.push(book);
             }
