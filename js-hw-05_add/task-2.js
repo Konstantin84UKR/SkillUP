@@ -35,17 +35,14 @@ class Book {
         this.totalPages = totalPages;
         this.currentPage = currentPage;
     }
-
     read(page) {
         if (this.currentPage + page <= this.totalPages) {
             this.currentPage += page;
         }
     }
-
     get bookProgres() {
         return Math.round(this.currentPage / this.totalPages * 100);
     }
-
     set bookProgres(percent) {
         const bookProgres = percent / 100 * this.totalPages;
         if (bookProgres <= this.totalPages) {
