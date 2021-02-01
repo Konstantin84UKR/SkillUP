@@ -67,11 +67,9 @@ class Library {
     get books() {
         return this._books;
     }
-
     get favourite() {
         return this._favourite;
     }
-
     buy(book) {
         if (!this._books.includes(book)) {
             this._books.push(book);
@@ -81,14 +79,11 @@ class Library {
         const bookOnSellIndex = this._books.findIndex(book => {
             return book.title === title;
         });
-
         if (bookOnSellIndex >= 0) {
             this._books.splice(bookOnSellIndex, 1);
         }
-
     }
     addToFavourite(title) {
-
         if (!this._favourite.includes(value => { return value.title === title })) {  
             const book = this._books.find(value => { return value.title === title });  
             if (book != undefined) {
@@ -96,9 +91,7 @@ class Library {
             }
         }
     }
-
     removeFromFavourite(title) {
-
         const bookIndex = this._favourite.findIndex(value => {
             return value.title === title;
         });
@@ -107,27 +100,22 @@ class Library {
             this._favourite.splice(bookIndex, 1);
         }
     }
-
     get сountFavouriteBooks() {
         return this._favourite.length;
     }
     get finishedBook() {
-
         const booksFin = this._books.reduce((acc, book) => {
             if (book.totalPages === book.currentPage) {
                 return ++acc;
             }
             return acc;
         }, 0);
-
         return booksFin;
     }
-
     totalCost() {
         const amountBook = this._books.reduce((acc, book) => {
             return acc + book.price;
         }, 0);
-
         return amountBook;
     }
 }
