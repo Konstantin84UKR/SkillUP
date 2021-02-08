@@ -28,12 +28,10 @@ class Calculator {
         if (typeof value === "number")
             this._AX = value;
     }
-
     set B(value) {
         if (typeof value === "number")
             this._BX = value;
     }
-
     add() {
         this._AX += this._BX; // результат в AX тоже по аналогии с intel 8086 
         this.LOG();
