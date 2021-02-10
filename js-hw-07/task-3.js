@@ -24,12 +24,11 @@ const images = [
   },
 ];
 
-
 let gallery = document.querySelector('#gallery');
 
 images.forEach(e => {
   let image = document.createElement('img');
-  image.setAttribute('url', e.url);
+  image.setAttribute('src', e.url);
   image.setAttribute('alt', e.alt);
   gallery.append(image);
 })
