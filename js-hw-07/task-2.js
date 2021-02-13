@@ -14,22 +14,22 @@
 // после чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй document.createElement().
 
 const ingredients = [
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
+    'Картошка',
+    'Грибы',
+    'Чеснок',
+    'Помидоры',
+    'Зелень',
+    'Приправы',
 ];
 
 let ul = document.querySelector('#ingredients');
 let ulTemp = document.createElement('ul');
 
 ingredients.forEach(e => {
-  let li = document.createElement("li");
-  li.innerText = e;
-  ulTemp.appendChild(li);
-  //ul.appendChild(li);
+    let li = document.createElement("li");
+    li.innerText = e;
+    ulTemp.appendChild(li);
+    //ul.appendChild(li);
 })
 
 ul.insertAdjacentElement("afterBegin", ulTemp)
