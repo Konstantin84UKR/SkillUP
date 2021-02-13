@@ -19,10 +19,13 @@ function createBoxes(amount) {
   for (let index = 0; index < amount; index++) {
     divWidth_Height += 10;
     let newDiv = document.createElement("div");
-    const RED = 255.99 * Math.random();
-    const GREEN = 255.99 * Math.random();
-    const BLUE = 255.99 * Math.random();
-    newDiv.setAttribute('style', `width: ${divWidth_Height}px; height: ${divWidth_Height}px; background: RGB(${RED}, ${GREEN}, ${BLUE});`);
+    const RED = Math.floor(255.99 * Math.random());
+    const GREEN = Math.floor(255.99 * Math.random());
+    const BLUE = Math.floor(255.99 * Math.random());
+    //newDiv.setAttribute('style', `width: ${divWidth_Height}px; height: ${divWidth_Height}px; background: RGB(${RED}, ${GREEN}, ${BLUE});`);
+    newDiv.style.width = `${divWidth_Height}px`;
+    newDiv.style.height = `${divWidth_Height}px`;
+    newDiv.style.background = `RGB(${RED}, ${GREEN}, ${BLUE})`;
     boxes.append(newDiv);
   }
 }

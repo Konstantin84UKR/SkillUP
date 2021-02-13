@@ -7,5 +7,6 @@ const range = document.querySelector('#font-size-control');
 const text = document.querySelector('#text');
 
 range.addEventListener('input', () => {
-  text.setAttribute('style', `font-size: ${(range.value * 2)}%;`);
+  //text.setAttribute('style', `font-size: ${(range.value * 2)}%;`);
+  text.style.fontSize = `${(range.value * 2)}%`
 })
