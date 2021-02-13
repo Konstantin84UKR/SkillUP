@@ -24,7 +24,6 @@ const images = [
   },
 ];
 
-
 let gallery = document.querySelector('#gallery');
 
 images.forEach(e => {
