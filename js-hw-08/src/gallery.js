@@ -6,7 +6,6 @@ export default class Gallery {
         this._galleryHTML = galleryHTML;
 
     }
-
     // принимает массив структур перезаписывая текущую галлерею
     loadItems(items) {
         this._items = [];
